@@ -1,0 +1,46 @@
+# =========================
+# Visual Studio / C# Ignore
+# =========================
+
+# Build folders
+bin/
+obj/
+
+# Visual Studio cache/options
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / ReSharper
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+
+# Publish output
+publish/
+
+# Temporary files
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ==================================
+# Ignore your secret service file
+# ==================================
+
+NewsService.cs
