@@ -3,165 +3,193 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI',sans-serif;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 body {
-    background: #f4f4f9;
-    color: #333;
+    background: linear-gradient(180deg, #f6f7fb 0%, #eef1f7 100%);
+    color: #1f2937;
 }
 
-/* Header - fixed top */
+/* Header */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #1a1a2e;
+    height: 70px;
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(10px);
     color: #fff;
-    padding: 20px 40px;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* Fixed Search Section */
+/* Search Section */
 .search-section {
     position: fixed;
-    top: 80px; /* below header */
-    left: 200px; /* leave space for left ad */
+    top: 70px;
+    left: 220px;
     right: 0;
     display: flex;
+    align-items: center;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     z-index: 999;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-    .search-section input[type="text"] {
-        width: 300px;
-        max-width: 100%;
-        padding: 12px 20px;
-        border-radius: 30px 0 0 30px;
-        border: 1px solid #ccc;
-        outline: none;
-        font-size: 1rem;
-    }
+.search-section input[type="text"] {
+    width: 320px;
+    max-width: 100%;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    font-size: 1rem;
+    background: #fff;
+    transition: 0.3s;
+}
 
-    .search-section button {
-        padding: 12px 25px;
-        border: none;
-        border-radius: 0 30px 30px 0;
-        background: #ff4c29;
-        color: #fff;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+.search-section input[type="text"]:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99,102,241,0.15);
+}
 
-        .search-section button:hover {
-            background: #e04325;
-        }
+.search-section button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(79,70,229,0.3);
+}
 
-/* Fixed Left Advertisement */
+.search-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79,70,229,0.35);
+}
+
+/* Left Ads */
 .left-ad {
     position: fixed;
-    top: 80px; /* below header */
+    top: 70px;
     left: 0;
-    width: 199px;
-    padding: 15px;
-    background-color: #CCB1A7;
+    width: 210px;
+    height: calc(100vh - 70px);
+    padding: 12px;
+    background: #ffffff;
+    border-right: 1px solid #eee;
+    overflow-y: auto;
 }
 
-    .left-ad img {
-        width: 90%;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.left-ad img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
 
-/* News container */
+.left-ad img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   News Grid
+   ========================= */
 .news-container {
-    margin-top: 140px; /* leave space for header + search */
-    margin-left: 200px; /* leave space for left ad */
-    padding: 20px;
+    margin-top: 130px;
+    margin-left: 220px;
+    padding: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-/* News cards */
+/* =========================
+   News Card
+   ========================= */
 .news-card {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.04);
 }
 
-    .news-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
 
-    .news-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-    .news-card .news-content {
-        padding: 15px;
-    }
+.news-card .news-content {
+    padding: 15px;
+}
 
-    .news-card h2 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        color: #ff4c29;
-    }
+.news-card h2 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: #111827;
+    line-height: 1.4;
+}
 
-    .news-card p {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-        color: #555;
-    }
+.news-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
 
-    .news-card a {
-        color: #ff4c29;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-        .news-card a:hover {
-            text-decoration: underline;
-        }
-
-/* Inline Ads in news grid */
-.ad-card {
-    background: #fffbe6;
-    color: #333;
-    text-align: center;
-    padding: 20px;
+.news-card a {
+    display: inline-block;
+    color: #4f46e5;
     font-weight: 600;
-    border: 2px dashed #ff4c29;
-    border-radius: 10px;
-    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-    .ad-card a {
-        color: #ff4c29;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.news-card a:hover {
+    color: #3730a3;
+}
 
-        .ad-card a:hover {
-            text-decoration: underline;
-        }
+/* =========================
+   Ad Card
+   ========================= */
+.ad-card {
+    background: linear-gradient(135deg, #fff7ed, #fff1f2);
+    border: 1px dashed #fb7185;
+    text-align: center;
+    padding: 18px;
+    border-radius: 16px;
+    font-weight: 600;
+    color: #9f1239;
+}
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #1a1a2e;
-    color: #fff;
-    font-size: 0.9rem;
+    background: #111827;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-top: 30px;
 }
