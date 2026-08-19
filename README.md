@@ -5,6 +5,7 @@ Users can search for topics or keywords and get relevant news articles from diff
 
 ✨ Features
 
+
 🔎 Search for news by keywords or topics
 
 📰 Get news from multiple sources in one place
@@ -19,6 +20,7 @@ Users can search for topics or keywords and get relevant news articles from diff
 
 
 Technologies Used
+
 
 C# — Backend development
 
