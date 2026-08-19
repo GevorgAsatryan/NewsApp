@@ -4,19 +4,28 @@ A web-based news application that brings news from multiple sources into one pla
 Users can search for topics or keywords and get relevant news articles from different publishers through the News API.
 
 ✨ Features
+
 🔎 Search for news by keywords or topics
+
 📰 Get news from multiple sources in one place
+
 🌍 Discover articles from different publishers
+
 ⚡ Fast and simple news search
+
 🔗 Access the original articles from their publishers
+
 📱 User-friendly web interface
 
 
 Technologies Used
 
 C# — Backend development
+
 JavaScript — Frontend functionality and API interaction
+
 HTML — Page structure and UI
+
 News API — Fetching news articles from multiple sources
 
 How It Works
