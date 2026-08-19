@@ -1,3 +1,6 @@
+using Microsoft.Extensions.Options;
+using NewsApp.Configuration;
+
 namespace NewsApp
 {
     using Microsoft.AspNetCore.Mvc;
@@ -6,18 +9,20 @@ namespace NewsApp
     public class NewsService
     {
         private readonly HttpClient _httpClient;
-
-        public NewsService(HttpClient httpClient)
+        private readonly ApiKeys _apiKeys;
+        public NewsService(HttpClient httpClient, IOptions<ApiKeys> apiKeys)
         {
             _httpClient = httpClient;
+            _apiKeys = apiKeys.Value;
         }
+
         [HttpGet("search")]
         public async Task<List<Article>> SearchNews(string query)
         {
             if (string.IsNullOrWhiteSpace(query))
                 throw new ArgumentException("Query cannot be empty");
 
-            var apiKey = "963c936e27a0434e9a0ea1ac101c0e76";
+            var apiKey = _apiKeys.News;
             var baseUrl = "https://newsapi.org/v2/";
 
             // Encode query properly

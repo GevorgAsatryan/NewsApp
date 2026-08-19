@@ -1,3 +1,4 @@
+using NewsApp.Configuration;
 
 namespace NewsApp
 {
@@ -7,6 +8,8 @@ namespace NewsApp
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.Configure<ApiKeys>(
+            builder.Configuration.GetSection("ApiKeys"));
             // Add services to the container
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();

@@ -39,15 +39,16 @@ function displayNews(articles) {
             const adCard = document.createElement("div");
             adCard.classList.add("news-card", "ad-card");
             adCard.innerHTML = `
-                            <a href="https://norprojects.com/" target="_blank">
-                                <img src="https://media.licdn.com/dms/image/v2/D4D22AQE0pvhE330JFw/feedshare-shrink_800/B4DZyFsAHyHcAg-/0/1771769431226?e=2147483647&v=beta&t=sanp4CSbBmBWh5B-PyzRGHnKYmu5vFEs4c_rkcQzi3k" alt="Nor Projects Ad">
+                            <a href="https://www.coca-colacompany.com/" target="_blank">
+                                <img src="https://i.pinimg.com/736x/01/03/63/0103631793d8792ece35481b46802605.jpg" alt="Coca Cola Ad">
                             </a>
                             <p>
-                                Nor Projects LLC is an Armenian furniture manufacturing and retail solutions company
-                                with a strong presence both locally and internationally. Founded in 2018, the company
-                                has grown into a reputable producer of custom furniture and retail shop-fitting solutions,
-                                working with well-known global brands and exporting its products across Europe and the CIS.
+                                We Refresh the World and Make a Difference
+                               
                             </p>
+                            <br>
+                            <br>
+                            <h1>Coca Cola</h1>
                             <br>
                             <h3>Ad</h3>
                         `;
